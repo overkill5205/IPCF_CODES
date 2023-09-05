@@ -1861,8 +1861,11 @@ while true; do
             ;;
         # EXIT
         27)
-        apt upgrade && apt Update -y
-        bash <(curl -fsSL https://raw.githubusercontent.com/overkill5205/Juicity-Installer/main/juicity-installer.sh)
+            apt upgrade && apt Update -y
+            bash <(curl -fsSL https://raw.githubusercontent.com/overkill5205/Juicity-Installer/main/juicity-installer.sh)
+            echo -e "Press ${RED}ENTER${NC} to continue"
+            read -s -n 1
+            ;;
         0)
             echo ""
             echo -e "${GREEN}Exiting...${NC}"
